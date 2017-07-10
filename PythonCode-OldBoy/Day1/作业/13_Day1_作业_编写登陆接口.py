@@ -79,6 +79,13 @@ while True:
                 _user_dict[_user_naming]['locked'] = 1
                 # 账户设置为锁定之后，将用户对应的错误密码次数清零，我理解的是锁定属性为1了，错误次数可以清零
                 _user_dict[_user_naming]['errorcount'] = 0
+                _write_data = open('UserPassword.txt', 'w+')
+                for _user_value in _user_dict.values():
+                    _user_list = [_user_value['name'], _user_value['password'], str(_user_value['locked']),
+                                  str(_user_value['errorcount'])]
+                    _users_list = ','.join(_user_list)
+                    _write_data.write(_users_list + '\n')
+                _write_data.close()
                 break
 
 
