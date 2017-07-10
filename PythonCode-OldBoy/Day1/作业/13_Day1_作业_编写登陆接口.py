@@ -88,7 +88,6 @@ while True:
                 _write_data.close()
                 break
 
-
     else:
         # 如果用户名不存在，则输出信息
         print("Pls ensure input currect account or password,you can try three times!")
