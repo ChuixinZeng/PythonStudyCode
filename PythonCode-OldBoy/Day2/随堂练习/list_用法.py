@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 
 # Author:Chuixin Zeng
-
+'''
 names = ["zengchuixin", "zengchuixin2", "zengchuixin3", "zengchuixin4"]
 
 print(names)
@@ -80,6 +80,50 @@ print(names2)
 # 删除列表
 del names2
 print(names2)
+'''
+
+'''
+# 拷贝列表
+names = ["dengchuixin", "zengchuixin",["alice","jack"],"aengchuixin2", "zengchuixin3", "zengchuixin4"]
+names3 = names.copy() # 浅拷贝，只复制第一层列表，子列表相当于一个独立的内存地址，被直接拷贝了
+print(names)
+print(names3)
+
+# 修改names列表，names3不会跟着一起修改
+names[4] = "tom"
+# 列表里面可以再包含子列表，修改子列表里面的值
+names[2][1] = "zeng"
+print(names)
+print(names3)
+'''
+names = ["dengchuixin", "zengchuixin",["alice","jack"],"aengchuixin2", "zengchuixin3", "zengchuixin4"]
+# 深拷贝，使用拷贝模块即可
+import copy
+# names3 = copy.copy(names) # 还是浅拷贝
+names3 = copy.deepcopy(names) # 深度拷贝，完全克隆
+print(names)
+print(names3)
+
+# 修改names列表，names3不会跟着一起修改
+names[4] = "tom"
+# 列表里面可以再包含子列表，修改子列表里面的值，大多数情况下不需要使用深拷贝，占内存空间
+names[2][1] = "zeng"
+print(names)
+print(names3)
+
+# range (1,10,2) 跳着循环打印
+# 跳着切片，每隔一个取一个值
+print(names[0:-1:2])
+# 因为0和-1可以省略掉，所以上面的可以改成
+print(names[::2])
+# 打印从0到-1所有的值
+print(names[:])
+# 列表的循环
+for i in names:
+    print(i)
+
+
+
 
 
 

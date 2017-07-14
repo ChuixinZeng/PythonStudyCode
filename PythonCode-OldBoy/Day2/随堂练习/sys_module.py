@@ -44,3 +44,5 @@ E:\GitRepository\PythonStudyCode\PythonCode-OldBoy\Day2\随堂练习>python sys_
 ['sys_moudule.py', '1', '2', '3']
 2
 '''
+
+# sys模块没找着，是因为sys是Python解释器自带的模块，没有放在目录里面
