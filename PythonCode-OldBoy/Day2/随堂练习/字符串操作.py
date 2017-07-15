@@ -1,6 +1,8 @@
 # -*- coding:utf-8 -*-
 
 # Author:Chuixin Zeng
+# 字符串实际上并不是修改了内容，而是更新后的内容把原来的内容全部覆盖了
+# 列表可以嵌套列表，可以嵌套字典
 
 name = "name zengchuixin zengchuxin"
 print(name.capitalize()) # 首字符大写
