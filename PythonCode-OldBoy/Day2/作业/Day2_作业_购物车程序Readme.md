@@ -1,4 +1,4 @@
-### 此Readme文档是针对编写的登录接口程序的说明
+### 此Readme文档是针对编写的购物车程序的说明
 
 
 ### 程序基本信息
@@ -8,6 +8,8 @@
 - 版本：Version 1.0
 - 工具：PyCharm 2017.1.4
 - 版本：Python 3.5
+- MarkDown工具：HBuilder
+- 流程图工具：ProcessOn
 
 ### 程序要求
 
@@ -21,8 +23,8 @@
 
 ### 程序相关文档
 
-- GitHub,[ChuixinZeng-Python笔记主页](https://github.com/ChuixinZeng/PythonStudyCode/tree/master/PythonCode-OldBoy/Day1)
-- 博客园,[老男孩Day1作业-编写多级菜单](http://www.cnblogs.com/ChuixinZeng/p/JamieZeng_Day1_list.html)
+- GitHub,[ChuixinZeng-Python笔记主页](https://github.com/ChuixinZeng/PythonStudyCode/tree/master/PythonCode-OldBoy/Day2)
+- 博客园,[老男孩Day2作业-编写购物车程序](http://www.cnblogs.com/ChuixinZeng/p/JamieZeng_Day2.html)
 
 ### 2017/07/16程序优化备忘
 
