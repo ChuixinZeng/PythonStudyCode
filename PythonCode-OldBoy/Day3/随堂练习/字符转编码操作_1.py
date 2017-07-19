@@ -1,4 +1,7 @@
-# -*- coding:utf-8 -*-
+import sys
+print(sys.getdefaultencoding())
 
-# Author:Chuixin Zeng
-
+s = "ฤ๚บร"
+s_gbk = s.encode('gbk')
+print(s_gbk)
+print(s.encode())
