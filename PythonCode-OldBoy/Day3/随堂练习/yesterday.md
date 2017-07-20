@@ -61,4 +61,4 @@ I feel the bitter taste of tears upon my tongue
 The time has come for me to pay for yesterday
 终于到了付出代价的时间 为了昨日
 When I was young
-当我年少轻狂
+当我年少轻狂end action
