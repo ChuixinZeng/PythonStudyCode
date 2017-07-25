@@ -8,7 +8,7 @@ type()用于查看数据类型
 在JAva里面超了会报错
 """
 # 字符串转二进制
-
+'''
 msg = "我爱北京天安门"
 print(msg)
 
@@ -16,4 +16,8 @@ print(msg)
 
 print(msg.encode(encoding="utf-8")) # 在Python3里面如果encode后面不写编码格式，则默认就是utf-8，在Python2里面默认使用系统编码格式
 
-print(msg.encode(encoding="utf-8").decode(encoding="utf-8")) # 可以吧二进制转换成字符串
+print(msg.encode(encoding="utf-8").decode(encoding="gbk")) # 可以吧二进制转换成字符串
+'''
+n = "老男孩"
+print(n.encode(encoding="utf-8"))
+print(n.encode())
