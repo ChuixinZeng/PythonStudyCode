@@ -15,7 +15,7 @@
 
 - 实现针对ha_proxy文件的增删查改操作
 
-### 输入的内容格式如下
+### 输入的内容格式要求如下
 
 		What are you do? (add|delete|search|q):add
 		server info:
@@ -30,8 +30,8 @@
 
 ### 程序相关文档
 
-- GitHub,[ChuixinZeng-Python笔记主页](https://github.com/ChuixinZeng/PythonStudyCode/tree/master/PythonCode-OldBoy/Day2)
-- 博客园,[老男孩Day2作业-编写购物车程序](http://www.cnblogs.com/ChuixinZeng/p/JamieZeng_Day2.html)
+- GitHub,[ChuixinZeng-Python笔记主页](https://github.com/ChuixinZeng/PythonStudyCode/tree/master/PythonCode-OldBoy/Day3)
+- 博客园,[老男孩Day3作业-练习文件操作](http://www.cnblogs.com/ChuixinZeng/p/Jamie_Zeng_Day3.html)
 
 ### 2017/07/24程序优化备忘
 
