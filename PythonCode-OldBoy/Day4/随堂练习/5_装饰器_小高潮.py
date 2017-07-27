@@ -5,7 +5,8 @@
 import time
 # 不修改源代码的情况下给sample1新增功能
 # 高阶函数+嵌套函数
-def timer(func): # timer(test1) func = test1 返回了deco的内存地址
+
+def timer(func): # timer(sample1) func = sample1 返回了deco的内存地址
     def deco():
         start_time = time.time()
         func() # run sample1
