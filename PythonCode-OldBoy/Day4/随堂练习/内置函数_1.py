@@ -13,3 +13,92 @@ print(ascii([1,3,"开挂"]))
 a = ascii([1,3,"开挂"])
 print(type(a)) # 列表变成字符串了
 
+bin(1) # 十进制转换二进制，转换的是数字，不是字符串
+bool(1) # 判断真假，0就是假
+
+a = bytes("abcde",encoding="utf-8")
+print(a.capitalize()) # 字符串不可以修改，这里a大写是生成了一个新的字符串
+b = bytearray("abcde",encoding="utf-8") # 可修改的字符串
+print(b[0]) # 把字母a对应的ASCII吗打印出来
+b[1] = 100 # 修改的时候，必须以ASCII码的形式进行修改
+print(b)
+
+print(callable([])) # 判断是不是可以调用，这里[]列表返回的是false，如果是加括号()的就可以调用，比如函数
+def sayhi():pass
+print(callable(sayhi))
+
+# 输入一个数字（必须是数字），返回ASCII对应的表信息
+print(chr(222))
+
+# 输入一个ASCII码的字符，返回对应的数字
+# Return the Unicode code point for a one-character string.
+# print(ord(11))
+
+# compile函数用于 底层将字符串编译成可执行的代码，类似于import模块然后执行
+code = '''
+def fib(max):
+    n,a,b = 0,0,1
+    while n<max:
+        print(b) # 通过a计算出b的值，打印出来就是斐波拉契数列
+        a,b = b,a+b
+        # 公式分解
+        # 相当于元组t = (b,a+b) a=t[0] b= t[1]，当b=1的时候，a=b，即a=1；当a=1的时候，b=a+b=1+1=2，即a=1，b等于2
+        # 当b=2的时候，a=b，即a=2；当a=2的时候，b=a+b=1+2=3，即a=2，b等于3
+        n = n +1
+    return 'done'
+
+fib(10) # 从1开始生成10个斐波拉契数列
+'''
+py_obj = compile(code,'error.log','exec')
+print(py_obj)
+exec(code)
+
+# dir可以查看对应的方法
+a = {}
+print(dir(a))
+
+# 返回商数和余数
+print(divmod(5,3)) # 5除以3的商数和余数
+
+# eval只能算简单的加减乘除
+x =1
+print(eval('x+1'))
+
+# filter
+# 下面的方法假如在程序里面只会调用一次，就没必要单独写一个函数，所以可以写匿名函数，用完就释放了
+def saaa(n):
+    print(n)
+saaa(3)
+
+# lambda只能处理简单的函数，但是如果函数里面有复杂的逻辑，比如for循环，就处理不了了，可以处理三元运算
+print((lambda n:print(n))(5))
+calc = lambda  n:print(n)
+print(calc(5))
+
+# 三元运算，如果n <4 比如n =2,n= 1,那么n的值就是3，如果n>4，那么n的值就是赋予的值
+calc = lambda  n:3 if n<4 else n
+print(calc(2)) # n = 3
+print(calc(5)) # n = 5
+
+# 使用filter从一组数据里面过滤自己想要的，下面就是把大于5的都打印出来
+# 这就是lambda和filter结合的使用
+res = filter(lambda n:n>5,range(10))
+for i in res:
+    print(i)
+
+# lambda和map结合使用
+res1 = map(lambda n:n*2,range(10)) # 相当于[i*2 for i in range(10)]
+for i in res1:
+    print(i)
+
+# 把所有的值累加
+import functools # 在Python2里面是单独的内置函数reduce()
+res2 = functools.reduce(lambda x,y:x+y,range(10))
+print(res2)
+
+# 不可变集合，类似于元组
+# a = frozenset([1,4,33,22,33,444,555])
+
+# global返回当前程序中所有变量的key:value格式
+print(globals())
+
