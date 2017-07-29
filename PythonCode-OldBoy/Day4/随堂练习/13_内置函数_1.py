@@ -102,3 +102,48 @@ print(res2)
 # global返回当前程序中所有变量的key:value格式
 print(globals())
 
+# hash散列
+print(hash('alex')) # alex对应的hash值是不会变的，唯一的，参考图片“hash函数.png”
+
+# 十进制转16进制
+print(hex(15)) # 结果是0XF
+
+def sample1():
+    local_var = 333
+    print(locals()) # 只打印local变量
+sample1()
+# print(globals()) # 只打印全局变量，肯定是没有local_var的
+print(globals().get('local_var'))
+
+# max min用于返回列表的最大值和最小值
+
+# Python里面一切皆对象，列表、字符串都是对象，是对象就有属性、方法
+
+# 转八进制,逢八进一
+print(oct(8))
+print(oct(9))
+
+# 返回3的3次方
+print(pow(3,3))
+
+# round保留小数点后几位
+print(round(1.3333,2))
+
+# sorted
+a = {6:2,8:0,1:4,-5:6,99:11,4:22}
+print(a) # 默认打印字典是无序的
+print(sorted(a)) # 对key进行排序
+print(sorted(a.items())) #对key value进行排序
+print(sorted(a.items(),key=lambda x:x[1])) # 按照value进行排序
+
+# Python里面一切数据类型都是由type()函数产生的
+#返回一个对象的所有属性名称用var()
+
+# 把a和b一一对应组合起来，使用zip函数
+a = [1,2,3,4]
+b = ["a","b","c","d"]
+for i in zip(a,b):
+    print(i)
+
+# 默认情况下可以使用import来导入模块名，如果不知道模块名的话，只知道字符串
+__import__('装饰器_小高潮')
