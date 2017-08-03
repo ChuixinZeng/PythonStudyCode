@@ -2,7 +2,7 @@
 
 # Author:Chuixin Zeng
 # 斐波拉契数列
-
+'''
 def fib(max):
     n,a,b = 0,0,1
     while n<max:
@@ -15,7 +15,7 @@ def fib(max):
     return 'done'
 
 fib(10) # 从1开始生成10个斐波拉契数列
-
+'''
 
 # 用函数做生成器，直接把print改成yield就是生成器了
 def fib(max):
