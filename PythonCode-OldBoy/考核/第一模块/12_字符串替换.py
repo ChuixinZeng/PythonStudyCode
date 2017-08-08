@@ -10,7 +10,7 @@ name = name[:2]+"p"+name[-2:]
 print("name:",name)
 
 #第二种
-name = " aleX"
+name = " alex"
 name1 = ""
 for i in name:
     i = "p" if i == "l" else i #三元运算
@@ -18,7 +18,7 @@ for i in name:
 print("name1:",name1)
 
 #第三种
-name = " aleX"
+name = " alex"
 name1 = ""
 for i in name:
     if i == "l":
