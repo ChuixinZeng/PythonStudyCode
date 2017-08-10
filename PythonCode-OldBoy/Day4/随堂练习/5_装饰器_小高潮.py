@@ -12,7 +12,7 @@ def timer(func): # timer(sample1) func = sample1 返回了deco的内存地址
         func() # run sample1
         end_time = time.time()
         print("the func run time is %s" %(end_time-start_time))
-    return deco
+    return deco # 这里实际上返回的是deco的内存地址
 
 @timer # 语法糖，想把装饰器给哪个函数，就写在哪个函数的头部，相当于下面的sample1=timer(sample1)
 def sample1():

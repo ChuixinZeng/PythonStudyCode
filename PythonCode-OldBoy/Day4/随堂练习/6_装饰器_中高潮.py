@@ -30,4 +30,5 @@ def sample2(name,age):
 #sample1=timer(sample1)
 sample1() # 执行的是deco，没有改变sample1的调用方式，没有改变sample1的代码
 # sample2() # sample2执行会报错，因为sample2有参数，而把sample2传给func之后，上面的函数里面的func并没有参数
+# sample2 = deco sample2() = deco()
 sample2("zengchuixin","30") # 这样调用，然后前面的装饰器里面加可选参数*args,**kwargs，这样不管被装饰的函数有没有参数都可以正常运行了

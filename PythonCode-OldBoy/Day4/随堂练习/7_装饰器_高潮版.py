@@ -18,9 +18,10 @@ def auth(auth_type):
 
                 if user == username and passwd == password:
                     print("\033[32;1mUser has passed authentication\033[0m")
+                    # res的值来自于被装饰的函数home
                     res = func(*args, **kwargs)  # from home，默认到这个地方不会返回home里面定义的返回值from home
                     print("after authenticaiton")
-                    return res
+                    return res # 这里才真正返回home函数的内存地址
 
                 else:
                     exit("\033[31;1mUser has error password\033[0m")
