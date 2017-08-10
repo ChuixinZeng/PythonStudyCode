@@ -29,11 +29,9 @@
 
 ### 设计思路流程图
 
+- GitHub,[Day4_员工信息表程序_流程图](https://github.com/ChuixinZeng/PythonStudyCode/blob/master/PythonCode-OldBoy/Day4/作业/Day4_员工信息表程序_流程图.png)
 
 ### 程序相关文档
 
-- GitHub,[ChuixinZeng-Python笔记主页](https://github.com/ChuixinZeng/PythonStudyCode/tree/master/PythonCode-OldBoy/Day3)
-- 博客园,[老男孩Day3作业-练习文件操作](http://www.cnblogs.com/ChuixinZeng/p/Jamie_Zeng_Day3.html)
-
-### 2017/08/10程序优化备忘
-
+- GitHub,[Day4所有代码笔记](https://github.com/ChuixinZeng/PythonStudyCode/tree/master/PythonCode-OldBoy/Day4)
+- 博客园,[老男孩Day4作业：员工信息表程序](http://www.cnblogs.com/ChuixinZeng/p/Jamie_Zeng_Day4.html)
