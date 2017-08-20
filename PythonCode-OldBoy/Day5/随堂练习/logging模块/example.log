@@ -1,0 +1,15 @@
+DEBUG:root:This message should go to the log file
+INFO:root:So should this
+WARNING:root:And this, too
+08/19/2017 11:04:01 PM This message should go to the log file
+08/19/2017 11:04:01 PM So should this
+08/19/2017 11:04:01 PM And this, too
+08/19/2017 11:06:10 PM DEBUG This message should go to the log file
+08/19/2017 11:06:10 PM INFO So should this
+08/19/2017 11:06:10 PM WARNING And this, too
+08/19/2017 11:07:47 PM logging用法2-写日志到文件.py - DEBUG This message should go to the log file
+08/19/2017 11:07:47 PM logging用法2-写日志到文件.py - INFO So should this
+08/19/2017 11:07:47 PM logging用法2-写日志到文件.py - WARNING And this, too
+08/19/2017 11:09:05 PM logging用法2-写日志到文件.py:13 - DEBUG This message should go to the log file
+08/19/2017 11:09:05 PM logging用法2-写日志到文件.py:14 - INFO So should this
+08/19/2017 11:09:05 PM logging用法2-写日志到文件.py:15 - WARNING And this, too
