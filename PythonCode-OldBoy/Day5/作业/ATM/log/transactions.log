@@ -1,2 +1,0 @@
-2017-08-24 15:50:17,492 - transaction - INFO - account:1234   action:repay    amount:100.0   interest:0.0
-2017-08-24 15:51:04,863 - transaction - INFO - account:1234   action:withdraw    amount:800.0   interest:40.0
