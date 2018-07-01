@@ -1,0 +1,7 @@
+iphone: 5288
+Mac pro: 12000
+Bike: 800
+Watch: 36000
+Coffe: 39
+Python book: 120
+Book: 100

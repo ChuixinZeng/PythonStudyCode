@@ -1,0 +1,7 @@
+2018-06-30 22:33:51,572 - transaction - INFO - account:1234   action:repay    amount:10000.0   interest:0.0
+2018-06-30 22:34:09,520 - transaction - INFO - account:1234   action:repay    amount:1000.0   interest:0.0
+2018-06-30 22:37:38,470 - transaction - INFO - account:1234   action:repay    amount:10000.0   interest:0.0
+2018-06-30 22:38:04,518 - transaction - INFO - account:1234   action:repay    amount:1.0   interest:0.0
+2018-06-30 22:38:07,072 - transaction - INFO - account:1234   action:repay    amount:6.0   interest:0.0
+2018-06-30 22:38:22,550 - transaction - INFO - account:1234   action:withdraw    amount:1000.0   interest:50.0
+2018-07-01 19:15:55,909 - transaction - INFO - account:1234   action:withdraw    amount:4.0   interest:0.2
