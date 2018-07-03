@@ -1,0 +1,8 @@
+﻿# 忽略hbuilder的文件
+.project
+
+# 忽略pycharm的文件
+.idea
+
+# 忽略VENV文件
+#venv
