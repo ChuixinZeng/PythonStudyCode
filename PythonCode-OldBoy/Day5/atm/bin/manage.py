@@ -24,8 +24,6 @@ def unblock_account(acc_data):
 # 冻结账户
 def block_account(acc_data):
     '''
-    冻结账户初步构想是，在linux里把他的权限改掉;
-    或者将其文件改名
     :param acc_data:
     :return:
     '''
@@ -39,7 +37,7 @@ def block_account(acc_data):
 
 # 添加账户、用户额度
 def add_account(acc_data):
-    account = {
+    account_data = {
         "id": None,
         "balance": None,
         "expire_date": None,
@@ -70,8 +68,8 @@ def add_account(acc_data):
     }
     for i in range(8):
         data = input("%s" % menu[i]).strip()
-        account['%s' % menu_user[i]] = data
-    accounts.dump_account(account)#写入文件
+        account_data['%s' % menu_user[i]] = data
+    accounts.dump_account(account_data)#写入文件
     print("创建成功！")
     return
 

@@ -46,28 +46,24 @@ def repay(acc_data):
     :return:
     '''
     account_data = accounts.load_current_balance(acc_data['account_id'])
-    #for k,v in account_data.items():
-    #    print(k,v )
     current_balance= ''' --------- 账户信息 --------
         账户金额 :    %s
         余额:    %s''' %(account_data['credit'],account_data['balance'])
     print(current_balance)
     back_flag = False
     while not back_flag:
-        repay_amount = input("\033[33;输入你要还款的金额:\033[0m").strip()
-        if len(repay_amount) >0 and repay_amount.isdigit():
-            print('ddd 00')
-            new_balance = transaction.make_transaction(trans_logger,account_data,'repay', repay_amount)
+        repay_amount = input("\033[33;1m输入你要还款的金额，输入b退出：\033[0m").strip()  # 还款金额
+        if len(repay_amount) > 0 and repay_amount.isdigit():
+            # print('ddd 00')
+            # 将数据传入make_transaction中（交易日志，用户数据，交易类型，还款金额）进行操作，最后返回的是最新操作之后的账户数据
+            new_balance = transaction.make_transaction(trans_logger, account_data, 'repay', repay_amount)
             if new_balance:
-                print('''\033[42;1m新的账户:%s\033[0m''' %(new_balance['balance']))
-                print('''输入b可退出''')
-
-        else:
-            print('\033[31;1m[%s] 不是一个有效的数目, 只接受整数!\033[0m' % repay_amount)
-            print('''输入b可退出''')
-
+                print('''\033[42;1m最新的余额：%s\033[0m''' % (new_balance['balance']))
+            else:
+                print('\033[31;1m[%s]是无效的金额！\033[0m' % repay_amount)
         if repay_amount == 'b':
             back_flag = True
+
 def withdraw(acc_data):
     '''
     打印当前余额，让用户执行取款操作
@@ -112,19 +108,18 @@ def transfer(acc_data):
     print(current_balance)
     back_flag = False
     while not back_flag:
-        reciprocal_account = input("\033[31;1m请输入对方帐户名：\033[0m").strip()  # 输入对方账户
+        reciprocal_account = input("\033[31;1m请输入对方帐户名，输入b，按两次enter退出：\033[0m").strip()  # 输入对方账户
         transfer_amount = input("\033[31;1m转账金额：\033[0m").strip()  # 转账金额
-        if reciprocal_account or transfer_amount == 'b':
-            return
         if len(transfer_amount) > 0 and transfer_amount.isdigit():
             new_balance = transaction.make_transaction(trans_logger,account_data,'transfer',
-                                                       transfer_amount, re_account=
-                                                       reciprocal_account)
+                                                       transfer_amount, re_account=reciprocal_account)
             if new_balance:
                 print("\033[41;1m转账成功！\033[0m")
                 print("\033[42;1m您当前的余额为:%s\033[0m" % (new_balance["balance"]))
             else:
-                print('\033[31;1m去你大爷的\033[0m')
+                print('\033[31;1m其他情况\033[0m')
+        if reciprocal_account == 'b':
+            back_flag = True
 
 #账单
 @login_required
@@ -135,10 +130,10 @@ def pay_check(acc_data):
 def logout(acc_data):
     exit("程序已退出！")
 
-#购物商城
+# 购物商城
 def shopping_mall_this(acc_data):
     shopping_mall.main_menu(acc_data)
-#管理窗口
+# 管理窗口
 def goto_manage():
    manage.manage_main(user_data)
 
@@ -150,8 +145,8 @@ def interactive(acc_data):
     menu = u'''
     ------- DAG5银行 ---------
     \033[32;1m1.  账户信息
-    2.  还款(功能已实现)
-    3.  取款(功能已实现)
+    2.  还款
+    3.  取款（提现）
     4.  转账
     5.  账单
     6.  退出

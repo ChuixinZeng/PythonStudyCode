@@ -1,5 +1,4 @@
 #!_*_coding:utf-8_*_
-#__author__:"Alex Li"
 
 from conf import settings
 from core import accounts
@@ -18,31 +17,33 @@ def make_transaction(log_obj,account_data,tran_type,amount,**others):
     :return: 返回最新的数据
     '''
     amount = float(amount)
-    if tran_type in  settings.TRANSACTION_TYPE:
+    if tran_type in settings.TRANSACTION_TYPE:
         # 计算利息
-        interest =  amount * settings.TRANSACTION_TYPE[tran_type]['interest']
+        interest = amount * settings.TRANSACTION_TYPE[tran_type]['interest']
         old_balance = account_data['balance']
+        # 还款操作
         if settings.TRANSACTION_TYPE[tran_type]['action'] == 'plus':
             new_balance = old_balance + amount + interest
+        # 取现\转账操作
         elif settings.TRANSACTION_TYPE[tran_type]['action'] == 'minus':
             new_balance = old_balance - amount - interest
 
-            # 转账操作
+            # 只属于转账操作
             if others.get('re_account'):
                 re_account_data = accounts.load_current_balance(others.get('re_account'))
                 re_account_balance = re_account_data['balance'] + amount  # 得到转入账户余额的最新值
                 re_account_data['balance'] = re_account_balance  # 将最新的余额全部写入账户的余额中
                 print(re_account_data)
                 accounts.dump_account(re_account_data)  # 将最新的账户所有数据写入到文件中
-            elif new_balance <0:
+            elif new_balance < 0:
                 print('''\033[31;1m你的账户 [%s] 没有足够的金额用于此次交易 [-%s], 你当前的账户是：
-                [%s]''' %(account_data['credit'],(amount + interest), old_balance ))
+                [%s]''' % (account_data['credit'], (amount + interest), old_balance))
                 return
 
         account_data['balance'] = new_balance
-        accounts.dump_account(account_data) # 保存新的账户信息到文件中
+        accounts.dump_account(account_data)
         log_obj.info("account:%s   action:%s    amount:%s   interest:%s" %
-                          (account_data['id'], tran_type, amount,interest) )
+                     (account_data['id'], tran_type, amount, interest))
         return account_data
     else:
         print("\033[31;1m交易类型 [%s] 不存在!\033[0m" % tran_type)

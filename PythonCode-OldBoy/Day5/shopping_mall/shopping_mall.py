@@ -33,7 +33,7 @@ def user_shopping(account_data):
     if salary > 0:
         shopping_list = []  # 存放用户购物车清单
         while True:
-            option = input("喜欢那个就买哪个(对应的标号)：")
+            option = input("喜欢那个就买哪个,按q结账退出，(对应的标号)：")
             if option.isdigit():
                 option = int(option)
                 if option >= 0 and option <= len(product_list):

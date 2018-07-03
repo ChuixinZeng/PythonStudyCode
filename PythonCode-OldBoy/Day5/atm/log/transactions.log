@@ -5,3 +5,5 @@
 2018-06-30 22:38:07,072 - transaction - INFO - account:1234   action:repay    amount:6.0   interest:0.0
 2018-06-30 22:38:22,550 - transaction - INFO - account:1234   action:withdraw    amount:1000.0   interest:50.0
 2018-07-01 19:15:55,909 - transaction - INFO - account:1234   action:withdraw    amount:4.0   interest:0.2
+2018-07-03 20:56:22,812 - transaction - INFO - account:1234   action:transfer    amount:1000.0   interest:50.0
+2018-07-03 20:56:42,789 - transaction - INFO - account:1234   action:transfer    amount:1235.0   interest:61.75
