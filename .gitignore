@@ -6,3 +6,4 @@
 
 # 忽略pyc文件
 .pyc
+_pycache_
