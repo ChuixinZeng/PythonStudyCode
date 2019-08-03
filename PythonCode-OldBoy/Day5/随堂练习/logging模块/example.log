@@ -13,3 +13,6 @@ WARNING:root:And this, too
 08/19/2017 11:09:05 PM logging用法2-写日志到文件.py:13 - DEBUG This message should go to the log file
 08/19/2017 11:09:05 PM logging用法2-写日志到文件.py:14 - INFO So should this
 08/19/2017 11:09:05 PM logging用法2-写日志到文件.py:15 - WARNING And this, too
+07/15/2019 04:39:29 PM logging用法2-写日志到文件.py:13 - DEBUG This message should go to the log file
+07/15/2019 04:39:29 PM logging用法2-写日志到文件.py:14 - INFO So should this
+07/15/2019 04:39:29 PM logging用法2-写日志到文件.py:15 - WARNING And this, too

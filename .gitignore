@@ -1,5 +1,8 @@
-# 忽略hbuilder的文件
+﻿# 忽略hbuilder的文件
 .project
 
 # 忽略pycharm的文件
 .idea
+
+# 忽略pyc文件
+.pyc

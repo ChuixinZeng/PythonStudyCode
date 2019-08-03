@@ -7,3 +7,6 @@
 2018-06-22 23:15:53,125 - TEST-LOG - WARNING - warn message
 2018-06-22 23:15:53,125 - TEST-LOG - ERROR - error message
 2018-06-22 23:15:53,125 - TEST-LOG - CRITICAL - critical message
+2019-07-15 16:45:08,794 - TEST-LOG - WARNING - warn message
+2019-07-15 16:45:08,794 - TEST-LOG - ERROR - error message
+2019-07-15 16:45:08,794 - TEST-LOG - CRITICAL - critical message
