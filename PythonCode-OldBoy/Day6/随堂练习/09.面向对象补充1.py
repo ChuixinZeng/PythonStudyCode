@@ -17,6 +17,71 @@
     - 多个函数需要传公共的参数（例如hostname、pwd）参考
         图片05.面向对象补充-函数式编程传参数弊端
         图片06.面向对象补充-函数式编程传参数弊端（解决）
-6、self是什么？
+6、self是什么？就是调用当前方法的对象
+
+class foo:
+    # 共有属性
+    # 静态字段，如果中国有32个身份，每个里面都要写属于的国家，那么就用静态字段，只需要保存一份
+    # 每个对象中保存相同的东西时，可以使用静态字段
+    country = "中国"
+    def __init__(self,name):
+        # 普通字段
+        # 普通属性
+        self.NAME = name
+        self.Count = count
+
+    def bar(self):
+        pass
+
+obj1= foo('河南', 100000)
+obj1.bar()
+
+obj2 = foo('山东', 1000)
+obj2.bar()
+# obj1和obj2传给self
+
+7、封装？
+- 类中封装了字段和方法
+- 对象中封装了：普通字段的值
+- 封装除了能封装字符串，还能封装对象（下面例子）
+
+class F1:
+    def __init__(self,n);
+        self.N =n
+        print('F1')
+
+class F2:
+    def __init__(self,arg1);
+        self.N =arg1
+        print('F2')
+
+class F3:
+    def __init__(self,arg2);
+        self.N =arg2
+        print('F3')
+
+o1 = F1('alex')
+o2 = F2(o1)
+o3 = F3(o2)
+
+# 问题：怎么通过o3找到Alex？
+o3.b.a.N = alex
+
+8、继承？
+参考图片07.继承示例
+
+9、多态？多种形态，Python是弱类型语言，自带多态特性
+10、
+字段：
+    普通字段（保存在对象中）
+    静态字段（保存在类中）
+方法：
+    普通方法（保存在类中，调用者是对象，至少有一个self参数）
+    静态方法（保存在类中，可以有任意个参数，对于静态方法，可以不创建对象，直接执行）
+    class F1:
+        @staticmethod
+        def a1():
+            print('alex')
+    F1.a1() # 未创建对象，直接通过类调用静态方法，静态方法也是保存在类中
 
 '''
