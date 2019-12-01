@@ -7,3 +7,7 @@
 # 忽略pyc文件
 .pyc
 _pycache_
+
+
+.git
+.vscode
